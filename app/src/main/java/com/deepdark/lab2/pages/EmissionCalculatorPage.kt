@@ -71,8 +71,8 @@ fun EmissionCalculatorPage() {
 
         results?.let {
             it.forEach { (fuelType, emissionResult) ->
-                Text("Викиди твердих частинок $fuelType: ${emissionResult.specificEmission.roundTo(2)} г/ГДж")
-                Text("Валовий викид $fuelType: ${emissionResult.totalEmission.roundTo(2)} т")
+                Text("Викиди твердих частинок $fuelType: ${emissionResult.solidParticleEmissions.roundTo(2)} г/ГДж")
+                Text("Валовий викид $fuelType: ${emissionResult.grossEmissions.roundTo(2)} т")
             }
         }
     }
